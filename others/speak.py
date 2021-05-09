@@ -3,12 +3,12 @@ from gtts import gTTS
 from playsound import playsound
 
 def cria_audio(audio):
-    tts = gTTS(audio,lang='pt-br')
+    tts = gTTS(audio, lang='pt-br')
 
-    tts.save('audios/hello.mp3')
+    tts.save('audios/hello2.mp3')
     print("Estou aprendendo o que você disse...")
 
-    playsound('audios/hello.mp3')
+    playsound('audios/hello2.mp3')
 
 def ouvir_microfone():
 
@@ -23,11 +23,11 @@ def ouvir_microfone():
         audio = microfone.listen(source)
     try:
 
-        frase = microfone.recognize_google(audio,language='pt-BR')
+        frase = microfone.recognize_google(audio, language='pt-BR')
 
         print("Você disse: " + frase)
 
-    except sr.UnkownValueError:
+    except sr.UnknownValueError:
         print("Não entendi")
 
     return frase
