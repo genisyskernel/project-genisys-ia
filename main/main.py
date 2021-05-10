@@ -1,3 +1,6 @@
-#MAIN#
+# MAIN #
 
-# Start #
+from interface import gui
+
+# Start GUI #
+gui.GUI
