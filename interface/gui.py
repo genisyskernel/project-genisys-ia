@@ -31,7 +31,6 @@ class GUI:
 
 
 
-
 # START PROGRAM #
 # Create frame #
 root = Tk()

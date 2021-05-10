@@ -2,5 +2,7 @@
 
 from interface import gui
 
-# Start GUI #
-gui.GUI
+# Start Main #
+if __name__ == '__main__':
+    # Start GUI frame #
+    gui.GUI
