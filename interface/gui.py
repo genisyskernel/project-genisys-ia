@@ -7,13 +7,37 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 from functions import ScreenCenter, DefaultColors
 
-class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
-        python_image = ImageTk.PhotoImage(file='../resources/banners/ImgPerfilProjeto2.png')
-        ttk.Label(self, image=python_image).pack()
+class GUI:
 
+    # FUNCTIONS #
+    def __init__(self, master):
 
+        ## MASTER ##
 
-app = App()
-app.mainloop()
+        self.master = master
+
+        # Frame title #
+        self.master.title("Genisys")
+
+        # Frame icon #
+        #self.master.iconbitmap("../package_resources/eltsistemas_icon01_original_256x256.ico")
+
+        # Center screen #
+        ScreenCenter.FrameCenter.center(self, 400, 400)
+
+        # Disable frame maximize and minimize #
+        self.master.resizable(0, 0)
+
+        # -------------------------------------------------------------------------------------------------------------#
+
+# START PROGRAM #
+# Create frame #
+root = tk.Tk()
+
+# Set configurations to frame #
+GUI(root)
+
+# Start frame loop #
+root.mainloop()
+
+# END #
