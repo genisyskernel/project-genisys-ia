@@ -7,6 +7,10 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 from functions import ScreenCenter, DefaultColors
 
+# Program to draw concentric circles in Python Turtle
+import turtle
+
+
 class GUI:
 
     # FUNCTIONS #
@@ -29,6 +33,18 @@ class GUI:
         self.master.resizable(0, 0)
 
         # -------------------------------------------------------------------------------------------------------------#
+
+        # Containers #
+        self.container_main = tk.Frame(self.master)
+
+        # Widgets configurations #
+        self.container_main['bg'] = DefaultColors.default_gui_color
+
+        # Add widgets in frame #
+        self.container_main.pack(side=tk.TOP, expand=1, fill=tk.BOTH)
+
+        # -------------------------------------------------------------------------------------------------------------#
+
 
 # START PROGRAM #
 # Create frame #
